@@ -1,0 +1,101 @@
+body {
+  background-color: #697565;
+  font-family: monospace;
+}
+
+.container {
+  margin: 2rem auto;
+  width: 80%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.container #pokemonName {
+  padding: 0.9rem 6rem;
+  font-size: 1.1rem;
+  border: 2px solid #3C3D37;
+  border-radius: 6px;
+  color: #3C3D37;
+  background-color: #ECDFCC;
+  font-family: monospace;
+  transition: all 0.12s ease;
+}
+.container #pokemonName:hover {
+  transform: scale(1.05);
+}
+.container #fetchBtn {
+  font-size: 1.1rem;
+  padding: 0.9rem 0.9rem;
+  border: 2px solid #3C3D37;
+  border-radius: 6px;
+  font-family: monospace;
+  color: rgba(60, 61, 55, 0.9843137255);
+  background-color: #ECDFCC;
+  transition: all 0.12s ease;
+  cursor: pointer;
+}
+.container #fetchBtn:hover {
+  background-color: #3C3D37;
+  color: #ECDFCC;
+  transform: scale(1.1);
+}
+.container #fetchBtn:active {
+  transform: scale(1);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  width: 80vw;
+  margin: 0px auto;
+}
+.main .list {
+  padding: 0.5rem 1rem;
+  max-width: 200px;
+  background-color: #ECDFCC;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: monospace;
+}
+.main .list h2 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0rem;
+}
+.main .list ul {
+  list-style-type: disclosure-closed;
+  padding: 0.7rem;
+  margin: 0 1rem;
+  text-align: left;
+}
+.main .list ul li {
+  font-size: 1rem;
+  padding: 5px 0;
+  color: rgba(70, 69, 69, 0.8784313725);
+}
+.main .list ul li:hover {
+  color: #3C3D37;
+  font-weight: bold;
+  cursor: pointer;
+}
+.main .image {
+  overflow: hidden;
+  flex-grow: 1;
+  flex-shrink: 0;
+  height: 400px;
+  max-width: 400px;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .image img {
+  display: none;
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
