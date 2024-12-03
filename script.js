@@ -9,13 +9,27 @@ document.getElementById("pokemonName")
         }
     });
 
-async function fetchData(pokemonName) {
+    const pokemonListItems = document.querySelectorAll(".list ul li");
+    pokemonListItems.forEach(item => {
+        item.addEventListener("click", () => fetchData(item.textContent));
+    });
+
+async function fetchData(pokemonName = "") {
     try {
-        pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+        console.log(pokemonName);
+        
 
-
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
-
+        if(!pokemonName){
+            pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+            if(!pokemonName){
+                alert("Please enter a valid Pokemon name");
+                return;
+            }
+        }
+        
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`);
+        console.log(pokemonName);
+        
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
